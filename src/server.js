@@ -6,16 +6,17 @@
 
 import app from './app.js';
 import dotenv from 'dotenv';
+import connectDB from './config/db.js';
 
 // Load environment variables
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 const startServer = async () => {
   try {
     // Database connection will go here...
-    // await connectDB(); 
+    await connectDB(); 
     
     app.listen(PORT, () => {
       console.log(`\n✅ Server running on http://localhost:${PORT}`);
