@@ -25,7 +25,7 @@ app.use(express.json());
 
 // Health Check Endpoint (to test if server is running)
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Habitore API is running 🚀' });
+  res.status(200).json({ message: 'Habitore API is running' });
 });
 
 // will mount /api/products and /api/auth here
